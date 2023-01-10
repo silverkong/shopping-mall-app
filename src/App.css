@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  outline: none;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* component-nav */
+
+.wrap-nav {
+  margin: 0 240px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-login {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10px 0;
+  color: #666666;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-login span {
+  margin-left: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrap-logo-input {
+  display: flex;
+  align-items: flex-end;
+}
+
+.lg-mellow {
+  width: 240px;
+}
+
+.input-search {
+  width: 468px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-bottom: 1px solid #ffaf00;
+}
+
+.input-search input {
+  width: 448px;
+  padding: 10px 0;
+  color: #222222;
+  font-size: 20px;
+}
+
+.input-search .ic-search {
+  color: #ffaf00;
+}
+
+.list-nav {
+  display: flex;
+}
+
+.list-nav li {
+  padding: 20px 30px;
+}
+
+.list-nav li:first-child {
+  padding-left: 5px;
+}
+
+.list-nav li:hover {
+  font-weight: 700;
+  cursor: pointer;
 }
