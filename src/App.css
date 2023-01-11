@@ -6,6 +6,7 @@
   list-style: none;
   border: none;
   outline: none;
+  box-sizing: border-box;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
@@ -13,21 +14,15 @@
 }
 
 /* component-nav */
+.container-box {
+  border-bottom: 1px solid #eeeeee;
+}
 
 .wrap-nav {
-  margin: 0 240px;
-}
-
-.btn-login {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  margin: 10px 0;
-  color: #666666;
-}
-
-.btn-login span {
-  margin-left: 5px;
+  margin-top: 40px;
 }
 
 .wrap-logo-input {
@@ -48,7 +43,7 @@
 
 .input-search input {
   width: 448px;
-  padding: 10px 0;
+  padding: 10px;
   color: #222222;
   font-size: 20px;
 }
@@ -57,19 +52,106 @@
   color: #ffaf00;
 }
 
+.btn-login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 0;
+  color: #666666;
+}
+
+.btn-login span {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
 .list-nav {
   display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-top: 20px;
 }
 
 .list-nav li {
-  padding: 20px 30px;
-}
-
-.list-nav li:first-child {
-  padding-left: 5px;
+  padding: 20px;
+  font-size: 14px;
 }
 
 .list-nav li:hover {
   font-weight: 700;
   cursor: pointer;
+}
+
+/* ProductAll */
+.list-all-products {
+  padding: 50px;
+}
+
+/* ProductCard */
+.wrap-product-card {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.wrap-product-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+}
+
+.badge-common {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 24px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.badge-new {
+  background-color: #ffaf00;
+}
+
+.badge-pick {
+  background-color: #ffd069;
+}
+
+.badge-new-and-pick {
+  top: 24px;
+}
+
+.img-product {
+  width: 100%;
+  z-index: -1;
+}
+
+.txt-product-brand {
+  margin: 7px 0;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.txt-product-title {
+  margin: 7px 0;
+  color: #222222;
+  font-size: 14px;
+}
+
+.txt-product-price {
+  margin-right: 10px;
+  color: #222222;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.txt-product-dc {
+  color: #999999;
+  font-size: 14px;
+  text-decoration: line-through;
 }

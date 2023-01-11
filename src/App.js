@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "./component/Nav";
 import Login from "./pages/Login";
 import ProductAll from "./pages/ProductAll";
@@ -11,7 +12,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<ProductAll />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </div>
