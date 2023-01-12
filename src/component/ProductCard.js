@@ -24,6 +24,11 @@ const ProductCard = ({ item }) => {
       <p className="txt-product-brand">{item?.brand}</p>
       <p className="txt-product-title">{item?.title}</p>
       <span
+        className={item?.discount === 0 ? "dp-none" : "txt-product-dc-percent"}
+      >
+        {item?.discount === 0 ? "" : item.discount}%
+      </span>
+      <span
         className={
           item
             ? dc === 0
@@ -37,7 +42,6 @@ const ProductCard = ({ item }) => {
       <span className={dc === 0 ? "dp-none" : "txt-product-price"}>
         {item ? (dc === 0 ? "" : (item.price - dc).toLocaleString()) : ""}원
       </span>
-      <span>{item?.discount === 0 ? "" : item.discount + "%"}</span>
     </div>
   );
 };

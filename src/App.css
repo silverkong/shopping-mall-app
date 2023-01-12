@@ -13,6 +13,10 @@
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
+.dp-none {
+  display: none;
+}
+
 /* component-nav */
 .container-box {
   border-bottom: 1px solid #eeeeee;
@@ -131,16 +135,25 @@
 }
 
 .txt-product-brand {
-  margin: 7px 0;
+  margin: 0;
+  margin-top: 15px;
   color: #222222;
   font-size: 14px;
   font-weight: 700;
 }
 
 .txt-product-title {
-  margin: 7px 0;
+  margin: 0;
+  margin-bottom: 10px;
   color: #222222;
   font-size: 14px;
+}
+
+.txt-product-dc-percent {
+  margin-right: 10px;
+  color: #fa4343;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .txt-product-price {
