@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const menuList = [
@@ -17,6 +18,12 @@ const Nav = () => {
     "액세서리",
     "기획전",
   ];
+
+  const navigate = useNavigate();
+
+  const goToLogin = () => {
+    navigate("/login");
+  };
   return (
     <div className="container-box">
       <Container>
@@ -28,7 +35,7 @@ const Nav = () => {
               <FontAwesomeIcon icon={faSearch} className="ic-search" />
             </div>
           </div>
-          <div className="btn-login">
+          <div className="btn-login" onClick={goToLogin}>
             <FontAwesomeIcon icon={faUser} />
             <span>로그인</span>
           </div>
