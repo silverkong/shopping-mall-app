@@ -192,3 +192,40 @@
   font-size: 17px !important;
   font-weight: 600 !important;
 }
+
+/* Product Detail */
+.wrap-product-detail {
+  margin-top: 70px;
+}
+
+.wrap-product-detail-img {
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
+  padding-right: 30px !important;
+  overflow: hidden;
+}
+
+.wrap-product-detail-info {
+  padding-right: 60px !important;
+}
+
+.txt-product-detail-brand {
+  display: inline-block;
+  margin: 10px 0 5px;
+  font-weight: 800;
+}
+
+.txt-product-detail-title {
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.box-product-detail-badge span {
+  display: inline-block;
+  margin-right: 7px;
+  padding: 7px 10px;
+  background-color: #ffaf00;
+  color: #ffffff;
+  font-size: 13px;
+}

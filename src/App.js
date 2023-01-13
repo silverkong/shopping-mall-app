@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Nav from "./component/Nav";
 import Login from "./pages/Login";
 import ProductAll from "./pages/ProductAll";
-import ProductDetail from "./pages/ProductDetail";
+import PrivateRoute from "./route/PrivateRoute";
 // CSS
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,7 +21,10 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<ProductAll />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route
+          path="/products/:id"
+          element={<PrivateRoute authenticate={authenticate} />}
+        />
         <Route
           path="/login"
           element={<Login setAuthenticate={setAuthenticate} />}

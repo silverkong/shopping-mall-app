@@ -1,9 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ item }) => {
-  let dc = Math.floor(item.price * (item.discount * 0.01));
+  // 할인가격 계산
+  const dc = Math.floor(item.price * (item.discount * 0.01));
+  const dcPrice = item.price - dc;
+
+  const navigate = useNavigate();
+  const showDetail = () => {
+    navigate(`/products/${item.id}`);
+  };
   return (
-    <div className="wrap-product-card">
+    <div className="wrap-product-card" onClick={showDetail}>
       <div className="wrap-product-img">
         <span className={item?.new === true ? "badge-common badge-new" : ""}>
           {item?.new === true ? "NEW" : ""}
@@ -40,7 +48,7 @@ const ProductCard = ({ item }) => {
         {item?.price.toLocaleString()}원
       </span>
       <span className={dc === 0 ? "dp-none" : "txt-product-price"}>
-        {item ? (dc === 0 ? "" : (item.price - dc).toLocaleString()) : ""}원
+        {dcPrice.toLocaleString()}원
       </span>
     </div>
   );

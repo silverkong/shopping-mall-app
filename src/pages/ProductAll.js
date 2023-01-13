@@ -20,7 +20,7 @@ const ProductAll = () => {
           {productList &&
             productList.map((menu) => (
               <Col lg={3}>
-                <ProductCard key={menu.id} item={menu} />
+                <ProductCard item={menu} />
               </Col>
             ))}
         </Row>
