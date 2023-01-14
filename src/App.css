@@ -7,6 +7,7 @@
   border: none;
   outline: none;
   box-sizing: border-box;
+  color: #222222;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
@@ -14,7 +15,7 @@
 }
 
 .dp-none {
-  display: none;
+  display: none !important;
 }
 
 /* component-nav */
@@ -196,6 +197,7 @@
 /* Product Detail */
 .wrap-product-detail {
   margin-top: 70px;
+  margin-bottom: 300px;
 }
 
 .wrap-product-detail-img {
@@ -213,10 +215,11 @@
 .txt-product-detail-brand {
   display: inline-block;
   margin: 10px 0 5px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .txt-product-detail-title {
+  width: 80%;
   margin-bottom: 20px;
   font-weight: 300;
 }
@@ -228,4 +231,116 @@
   background-color: #ffaf00;
   color: #ffffff;
   font-size: 13px;
+}
+
+.box-product-detail-price {
+  margin-top: 40px;
+}
+
+.txt-product-detail-dc-percent,
+.txt-product-detail-price {
+  margin-right: 15px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.txt-product-detail-dc-percent {
+  color: #fa4343;
+}
+
+.txt-product-detail-dc {
+  color: #999999;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+
+.box-product-detail-delivery {
+  display: flex;
+  margin-top: 80px;
+}
+
+.box-product-detail-delivery .ic-truck {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.box-product-detail-delivery-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.box-product-detail-option {
+  margin-top: 30px;
+}
+
+.box-product-detail-option > span {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.box-product-detail-option .dropdown-product-detail-option #dropdown-basic {
+  width: 80%;
+  height: 50px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 0;
+  color: #222222;
+  text-align: left;
+}
+
+.dropdown-toggle::after {
+  float: right;
+  margin-top: 10px;
+}
+
+.dropdown-menu {
+  width: 80%;
+  border: 1px solid #222222 !important;
+  border-radius: 0 !important;
+}
+
+.dropdown-item {
+  display: flex !important;
+  align-items: center;
+  height: 50px;
+}
+
+.box-product-detail-btn {
+  margin-top: 15px;
+}
+
+.box-product-detail-btn .btn-product-detail-cart,
+.box-product-detail-btn .btn-product-detail-buy {
+  width: 40%;
+  height: 50px;
+  border-radius: 0 !important;
+}
+
+.box-product-detail-btn .btn-product-detail-cart {
+  background-color: #ffffff;
+  border: 1px solid #ffaf00;
+  color: #ffaf00;
+}
+
+.box-product-detail-btn .btn-product-detail-cart:hover {
+  background-color: #ffd069;
+  border: 1px solid #ffd069;
+  color: #ffffff;
+}
+
+.box-product-detail-btn .btn-product-detail-buy {
+  background-color: #ffaf00;
+  border: 1px solid #ffaf00;
+  color: #ffffff;
+}
+
+.box-product-detail-btn .btn-product-detail-buy:hover {
+  background-color: #eaa102;
+  border: 1px solid #eaa102;
+  color: #ffffff;
 }
