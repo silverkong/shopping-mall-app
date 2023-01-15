@@ -30,6 +30,10 @@ const Nav = ({ authenticate, setAuthenticate }) => {
     navigate("/");
   };
 
+  const goToAllList = () => {
+    navigate("/");
+  };
+
   const search = (event) => {
     if (event.key === "Enter") {
       // 입력한 검색어를 읽어와서 URL을 바꿔줌
@@ -43,7 +47,12 @@ const Nav = ({ authenticate, setAuthenticate }) => {
       <Container>
         <div className="wrap-nav">
           <div className="wrap-logo-input">
-            <img src={Logo} alt="" className="lg-mellow" />
+            <img
+              src={Logo}
+              alt=""
+              className="lg-mellow"
+              onClick={goToAllList}
+            />
             <div className="input-search">
               <input type="text" onKeyDown={(event) => search(event)} />
               <FontAwesomeIcon icon={faSearch} />
@@ -63,7 +72,9 @@ const Nav = ({ authenticate, setAuthenticate }) => {
         </div>
         <ul className="list-nav">
           {menuList.map((menu) => (
-            <li key={menu}>{menu}</li>
+            <li key={menu}>
+              <a href="/">{menu}</a>
+            </li>
           ))}
         </ul>
       </Container>
