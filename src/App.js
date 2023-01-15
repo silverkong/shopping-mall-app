@@ -12,13 +12,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   // 로그인 판별 : true - 로그인 O, false - 로그인 X
   const [authenticate, setAuthenticate] = useState(false);
-  useEffect(() => {
-    console.log(authenticate);
-  }, [authenticate]);
+  useEffect(() => {}, [authenticate]);
 
   return (
     <div>
-      <Nav />
+      <Nav authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path="/" element={<ProductAll />} />
         <Route

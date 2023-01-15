@@ -6,7 +6,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ authenticate, setAuthenticate }) => {
   const menuList = [
     "전체",
     "상의",
@@ -20,8 +20,14 @@ const Nav = () => {
   ];
 
   const navigate = useNavigate();
+  // 로그인으로 이동
   const goToLogin = () => {
     navigate("/login");
+  };
+  // 로그아웃
+  const logout = () => {
+    setAuthenticate(false);
+    navigate("/");
   };
 
   const search = (event) => {
@@ -43,10 +49,17 @@ const Nav = () => {
               <FontAwesomeIcon icon={faSearch} />
             </div>
           </div>
-          <div className="btn-login" onClick={goToLogin}>
-            <FontAwesomeIcon icon={faUser} />
-            <span>로그인</span>
-          </div>
+          {authenticate === true ? (
+            <div className="btn-login" onClick={logout}>
+              <FontAwesomeIcon icon={faUser} />
+              <span>로그아웃</span>
+            </div>
+          ) : (
+            <div className="btn-login" onClick={goToLogin}>
+              <FontAwesomeIcon icon={faUser} />
+              <span>로그인</span>
+            </div>
+          )}
         </div>
         <ul className="list-nav">
           {menuList.map((menu) => (
