@@ -20,10 +20,18 @@ const Nav = () => {
   ];
 
   const navigate = useNavigate();
-
   const goToLogin = () => {
     navigate("/login");
   };
+
+  const search = (event) => {
+    if (event.key === "Enter") {
+      // 입력한 검색어를 읽어와서 URL을 바꿔줌
+      let keyword = event.target.value;
+      navigate(`/?q=${keyword}`);
+    }
+  };
+
   return (
     <div className="container-box">
       <Container>
@@ -31,8 +39,8 @@ const Nav = () => {
           <div className="wrap-logo-input">
             <img src={Logo} alt="" className="lg-mellow" />
             <div className="input-search">
-              <input type="text" />
-              <FontAwesomeIcon icon={faSearch} className="ic-search" />
+              <input type="text" onKeyDown={(event) => search(event)} />
+              <FontAwesomeIcon icon={faSearch} />
             </div>
           </div>
           <div className="btn-login" onClick={goToLogin}>

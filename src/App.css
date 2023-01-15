@@ -53,10 +53,6 @@
   font-size: 20px;
 }
 
-.input-search .ic-search {
-  color: #ffaf00;
-}
-
 .btn-login {
   display: flex;
   justify-content: flex-end;

@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Col } from "react-bootstrap";
 
 const ProductCard = ({ item }) => {
   // 할인가 계산
@@ -11,7 +12,7 @@ const ProductCard = ({ item }) => {
     navigate(`/products/${item.id}`);
   };
   return (
-    <div className="wrap-product-card" onClick={showDetail}>
+    <Col lg={3} className="wrap-product-card" onClick={showDetail}>
       {/* 이미지 / 신상품 / 베스트 */}
       <div className="wrap-product-img">
         <span className={item?.new === true ? "badge-common badge-new" : ""}>
@@ -56,7 +57,7 @@ const ProductCard = ({ item }) => {
           {dcPrice.toLocaleString()}원
         </span>
       </div>
-    </div>
+    </Col>
   );
 };
 
