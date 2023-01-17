@@ -19,6 +19,10 @@ const ProductDetail = () => {
     window.scrollTo(0, 0);
   }, [id]);
 
+  let now = new Date();
+  let todayMonth = now.getMonth() + 1;
+  let todayDate = now.getDate();
+
   return (
     <Container className="wrap-product-detail">
       <Row>
@@ -79,7 +83,9 @@ const ProductDetail = () => {
             <FontAwesomeIcon icon={faTruck} className="ic-truck" />
             <div className="box-product-detail-delivery-info">
               <span>무료배송</span>
-              <span>0월 0일 도착예정</span>
+              <span>
+                {todayMonth}월 {todayDate + 2}일 도착예정
+              </span>
             </div>
           </div>
           {/* 옵션 */}
